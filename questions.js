@@ -98,28 +98,39 @@ return k_combinations(array,2);
 };
 
 var allElementsExceptFirstThree = function(array) {
-  return 'Write your method here';
-}
+  return array.slice(3,array.length);
+};
 
 var addElementToBeginning = function(array, element) {
-  return 'Write your method here';
-}
+  array.unshift(element);
+  return array;
+};
 
 var sortByLastLetter = function(array) {
-  return 'Write your method here';
-}
+  var revAry = reverseWordsInArray(array);
+  revAry.sort();
+  return reverseWordsInArray(revAry);
+};
 
 var getFirstHalf = function(string) {
-  return 'Write your method here';
-}
+  var lengthy = string.length;
+  var halfy = lengthy/2;
+  if(lengthy % 2 !== 0) {
+    halfy = lengthy/2 +1 ;
+  }
+  return string.slice(0,halfy);
+};
 
 var makeNegative = function(number) {
-  return 'Write your method here';
-}
+  return -Math.abs(number);
+};
 
 var numberOfPalindromes = function(array) {
-  return 'Write your method here';
-}
+  var res = array.filter(function(item){
+    return (item.split('').reverse().join('') === item);
+  });
+  return res.length;
+};
 
 var shortestWord = function(array) {
   return 'Write your method here';
